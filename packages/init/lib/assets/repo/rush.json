@@ -22,7 +22,7 @@
         "versionBumpCommitMessage": "Applying package updates. [skip-ci]"
     },
     "repository": {
-        "url": "https://github.com/mpiroc-org/tools.git"
+        "url": "https://github.com/mpiroc-org/TODO.git"
     },
     "eventHooks": {
         "preRushInstall": [],
@@ -32,26 +32,5 @@
     },
     "variants": [],
     "projects": [
-        {
-            "packageName": "@mpiroc-org/aws",
-            "projectFolder": "packages/aws",
-            "reviewCategory": "production",
-            "shouldPublish": true,
-            "versionPolicyName": "default"
-        },
-        {
-            "packageName": "@mpiroc-org/build-layer",
-            "projectFolder": "packages/build-layer",
-            "reviewCategory": "production",
-            "shouldPublish": true,
-            "versionPolicyName": "default"
-        },
-        {
-            "packageName": "@mpiroc-org/init",
-            "projectFolder": "packages/init",
-            "reviewCategory": "production",
-            "shouldPublish": true,
-            "versionPolicyName": "default"
-        }
     ]
 }

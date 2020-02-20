@@ -1,0 +1,24 @@
+{
+    "files.associations": {
+        "*.json": "jsonc"
+    },
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+
+        "**/.cache": true,
+        "**/.rush": true,
+        "**/node_modules": true,
+        "**/package-lock.json": true,
+        "**/out": true,
+        "**/dist": true,
+        "**/temp": true,
+        "**/tsconfig.tsbuildinfo": true
+    },
+    "eslint.enable": false,
+    "typescript.tsdk": "common/temp/node_modules/typescript/lib",
+    "typescript.format.semicolons": "remove"
+}

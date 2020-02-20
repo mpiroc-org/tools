@@ -1,0 +1,23 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/command-line.schema.json",
+    "commands": [
+        {
+            "commandKind": "bulk",
+            "name": "lint",
+            "summary": "Lint all packages",
+            "description": "Run the npm lint script for each package, if it exists",
+            "enableParallelism": true,
+            "ignoreMissingScript": true
+        },
+        {
+            "commandKind": "bulk",
+            "name": "test",
+            "summary": "Test all packages",
+            "description": "Run the npm test script for each package, if it exists",
+            "enableParallelism": true,
+            "ignoreMissingScript": true,
+            "allowWarningsInSuccessfulBuild": true
+        }
+    ],
+    "parameters": []
+}

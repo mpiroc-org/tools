@@ -1,0 +1,17 @@
+{
+  "extends": "./node_modules/@mpiroc-org/ts-config/tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./out"
+  },
+  "exclude": [
+    // Since we're overriding the default, we need to explicit list the directories
+    // that are ignored by default.
+    "node_modules",
+    "bower_components",
+    "jspm_packages",
+    "out",
+
+    // Should be included in final bundle as loose files.
+    "lib/assets"
+  ]
+}

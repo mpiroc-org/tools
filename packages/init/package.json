@@ -1,0 +1,53 @@
+{
+  "name": "@mpiroc-org/init",
+  "version": "0.0.11",
+  "description": "Tool to create new packages in a monorepo",
+  "keywords": [],
+  "homepage": "https://github.com/mpiroc-org/tools#readme",
+  "bugs": "https://github.com/mpiroc-org/tools/issues",
+  "license": "UNLICENSED",
+  "author": "Matthew Pirocchi <matthew.pirocchi@gmail.com>",
+  "contributors": [],
+  "main": "out/lib/index.ts",
+  "types": "out/lib/index.d.ts",
+  "repository": "github:mpiroc-org/tools",
+  "bin": {
+    "init": "out/bin/init.js"
+  },
+  "scripts": {
+    "build": "tsc && copyfiles --all lib/assets/**/* out",
+    "lint": "eslint --ext .ts ."
+  },
+  "engines": {
+    "node": "^12.13.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/",
+    "main": "out/lib/index.js",
+    "types": "out/lib/index.d.ts"
+  },
+  "jest": {
+    "preset": "@mpiroc-org/jest-config"
+  },
+  "dependencies": {
+    "fs-extra": "^8.1.0",
+    "jsonc-parser": "^2.2.0",
+    "yargs": "^15.0.2"
+  },
+  "devDependencies": {
+    "@microsoft/api-extractor": "^7.7.8",
+    "@mpiroc-org/api-extractor-config": "^0.0.5",
+    "@mpiroc-org/eslint-config": "^0.0.5",
+    "@mpiroc-org/ts-config": "^0.0.5",
+    "@types/fs-extra": "^8.0.1",
+    "@types/jest": "^24.0.23",
+    "@types/node": "^12.12.8",
+    "@types/yargs": "^13.0.3",
+    "copyfiles": "^2.2.0",
+    "eslint": "^6.8.0",
+    "jest": "^24.9.0",
+    "parcel-bundler": "^1.12.4",
+    "ts-jest": "^24.1.0",
+    "typescript": "^3.7.2"
+  }
+}

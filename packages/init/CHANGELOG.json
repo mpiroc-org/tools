@@ -1,0 +1,41 @@
+{
+  "name": "@mpiroc-org/init",
+  "entries": [
+    {
+      "version": "0.0.11",
+      "tag": "@mpiroc-org/init_v0.0.11",
+      "date": "Fri, 06 Mar 2020 21:46:18 GMT",
+      "comments": {
+        "none": [
+          {
+            "comment": "Unknown"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.0.10",
+      "tag": "@mpiroc-org/init_v0.0.10",
+      "date": "Thu, 27 Feb 2020 22:08:31 GMT",
+      "comments": {}
+    },
+    {
+      "version": "0.0.9",
+      "tag": "@mpiroc-org/init_v0.0.9",
+      "date": "Sat, 22 Feb 2020 00:20:33 GMT",
+      "comments": {}
+    },
+    {
+      "version": "0.0.8",
+      "tag": "@mpiroc-org/init_v0.0.8",
+      "date": "Sat, 22 Feb 2020 00:15:12 GMT",
+      "comments": {}
+    },
+    {
+      "version": "0.0.7",
+      "tag": "@mpiroc-org/init_v0.0.7",
+      "date": "Sat, 22 Feb 2020 00:11:29 GMT",
+      "comments": {}
+    }
+  ]
+}
