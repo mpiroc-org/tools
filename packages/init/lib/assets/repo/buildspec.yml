@@ -1,12 +1,20 @@
 
 version: 0.2
+env:
+  parameter-store:
+    GITHUB_PACKAGE_REGISTRY: /github/registry
+    GITHUB_PERSONAL_ACCESS_TOKEN: /github/mpiroc-org/ci
+    GITHUB_SCOPE: /github/mpiroc-org/scope
 phases:
   install:
     runtime-versions:
       nodejs: 12
   pre_build:
     commands:
-      - node common/scripts/install-run-rush.js install
+      # Note: Assumes echo uses UTF-8 encoding--this is not true on Windows/PowerShell.
+      - echo "@$GITHUB_SCOPE:registry=https:$GITHUB_PACKAGE_REGISTRY" >> ~/.npmrc
+      - echo "$GITHUB_PACKAGE_REGISTRY/:_authToken=$GITHUB_PERSONAL_ACCESS_TOKEN" >> ~/.npmrc
+      - node common/scripts/install-run-rush.js update --full
   build:
     commands:
       - node common/scripts/install-run-rush.js build
@@ -14,3 +22,7 @@ phases:
   post_build:
     commands:
       - node common/scripts/install-run-rush.js test
+      - |
+        if [ $CODEBUILD_WEBHOOK_TRIGGER = "branch/master" ]; then
+          rush publish --include-all --publish --add-commit-details --apply --registry https://npm.pkg.github.com/$GITHUB_SCOPE
+        fi
