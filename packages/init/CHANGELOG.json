@@ -2,6 +2,12 @@
   "name": "@mpiroc-org/init",
   "entries": [
     {
+      "version": "0.0.13",
+      "tag": "@mpiroc-org/init_v0.0.13",
+      "date": "Fri, 06 Mar 2020 22:44:15 GMT",
+      "comments": {}
+    },
+    {
       "version": "0.0.12",
       "tag": "@mpiroc-org/init_v0.0.12",
       "date": "Fri, 06 Mar 2020 22:38:54 GMT",
