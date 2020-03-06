@@ -22,3 +22,7 @@ phases:
   post_build:
     commands:
       - node common/scripts/install-run-rush.js test
+      - |
+        if [ $CODEBUILD_WEBHOOK_TRIGGER = "branch/master" ]; then
+          rush publish --include-all --publish --add-commit-details --apply --registry https://npm.pkg.github.com/$GITHUB_SCOPE
+        fi
