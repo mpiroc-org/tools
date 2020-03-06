@@ -19,6 +19,7 @@ git rebase -i develop # Squash to a single commit
 git checkout develop
 git merge feature/foo
 git branch -D feature/foo # Can restore with full history from origin/feature/foo if necessary.
+git push
 ```
 
 ### Bump version on develop

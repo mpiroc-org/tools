@@ -2,6 +2,18 @@
   "name": "@mpiroc-org/init",
   "entries": [
     {
+      "version": "0.0.12",
+      "tag": "@mpiroc-org/init_v0.0.12",
+      "date": "Fri, 06 Mar 2020 22:38:54 GMT",
+      "comments": {
+        "none": [
+          {
+            "comment": "Update assets to build from CI instead of local scripts.\""
+          }
+        ]
+      }
+    },
+    {
       "version": "0.0.11",
       "tag": "@mpiroc-org/init_v0.0.11",
       "date": "Fri, 06 Mar 2020 21:46:18 GMT",

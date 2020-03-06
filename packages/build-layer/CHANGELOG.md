@@ -1,6 +1,11 @@
 # Change Log - @mpiroc-org/build-layer
 
-This log was last generated on Fri, 06 Mar 2020 21:46:18 GMT and should not be manually modified.
+This log was last generated on Fri, 06 Mar 2020 22:38:54 GMT and should not be manually modified.
+
+## 0.0.12
+Fri, 06 Mar 2020 22:38:54 GMT
+
+*Version update only*
 
 ## 0.0.11
 Fri, 06 Mar 2020 21:46:18 GMT
