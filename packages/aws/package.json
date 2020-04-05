@@ -1,6 +1,6 @@
 {
   "name": "@mpiroc-org/aws",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "Tool to create new packages in a monorepo",
   "keywords": [],
   "homepage": "https://github.com/mpiroc-org/tools#readme",

@@ -1,6 +1,6 @@
 {
   "name": "@mpiroc-org/build-layer",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "Tool for building a package as a Lambda Layer",
   "keywords": [],
   "homepage": "https://github.com/mpiroc-org/tools#readme",
