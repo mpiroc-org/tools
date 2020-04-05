@@ -14,6 +14,10 @@
   "bin": {
     "init": "out/bin/init.js"
   },
+  "files": [
+    "out/bin/*",
+    "out/lib/*"
+  ],
   "scripts": {
     "build": "tsc && copyfiles --all lib/assets/**/* out",
     "lint": "eslint --ext .ts ."
