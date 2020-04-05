@@ -14,6 +14,9 @@
   "bin": {
     "purge-logs": "node out/bin/purge-logs.js"
   },
+  "files": [
+    "dist/lib/*"
+  ],
   "scripts": {
     "build": "tsc && parcel build lib/index.ts --out-dir dist/lib --target node --no-minify && api-extractor run --local --verbose",
     "lint": "eslint --ext .ts ."

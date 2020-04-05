@@ -18,6 +18,9 @@
     "test": "test"
   },
   "repository": "github:mpiroc-org/tools",
+  "files": [
+    "dist/lib/*"
+  ],
   "scripts": {
     "lint": "eslint --ext .ts .",
     "build": "tsc && parcel build lib/index.ts --out-dir dist/lib --target node --no-minify && api-extractor run --local --verbose"
