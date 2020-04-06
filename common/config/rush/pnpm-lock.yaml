@@ -22,6 +22,7 @@ dependencies:
   jest: 24.9.0
   jsonc-parser: 2.2.0
   parcel-bundler: 1.12.4
+  parcel-plugin-shebang: 1.2.8
   ts-jest: 24.3.0_jest@24.9.0
   typescript: 3.8.2
   yargs: 15.0.2
@@ -2979,6 +2980,12 @@ packages:
       node: '>=0.8.0'
     resolution:
       integrity: sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ=
+  /escape-string-regexp/2.0.0:
+    dev: false
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-UpzcLCXolUWcNu5HtVMHYdXJjArjsF9C0aNnquZYY4uW/Vu0miy5YoWvbV345HauVvcAUnpRuhMMcqTcGOY2+w==
   /escodegen/1.14.1:
     dependencies:
       esprima: 4.0.1
@@ -5668,6 +5675,14 @@ packages:
     requiresBuild: true
     resolution:
       integrity: sha512-G+iZGGiPEXcRzw0fiRxWYCKxdt/F7l9a0xkiU4XbcVRJCSlBnioWEwJMutOCCpoQmaQtjB4RBHDGIHN85AIhLQ==
+  /parcel-plugin-shebang/1.2.8:
+    dependencies:
+      escape-string-regexp: 2.0.0
+      parcel-bundler: 1.12.4
+      yn: 3.1.1
+    dev: false
+    resolution:
+      integrity: sha512-ZTbUZ33EH03yeNxEi85LO3iLr9svs7q8ZLyqErMvIhMxjll6F07dKWuZMNwldHivf9mIbB+/ls3QdWZyFGpWmA==
   /parent-module/1.0.1:
     dependencies:
       callsites: 3.1.0
@@ -7988,6 +8003,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-GH/X/hYt+x5hOat4LMnCqMd8r5Cv78heOMIJn1hr7QPPBqfeC6p89Y78+WB9yGDvfpCvgasfmWLzNzEioOUD9Q==
+  /yn/3.1.1:
+    dev: false
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-Ux4ygGWsu2c7isFWe8Yu1YluJmqVhxqK2cLXNQA5AcC3QfbGNpM7fu0Y8b/z16pXLnFxZYvWhd3fhBY9DLmC6Q==
   /z-schema/3.18.4:
     dependencies:
       lodash.get: 4.4.2
@@ -8066,6 +8087,7 @@ packages:
       jest: 24.9.0
       jsonc-parser: 2.2.0
       parcel-bundler: 1.12.4
+      parcel-plugin-shebang: 1.2.8
       ts-jest: 24.3.0_jest@24.9.0
       typescript: 3.8.2
       yargs: 15.0.2
@@ -8076,7 +8098,7 @@ packages:
       '@typescript-eslint/eslint-plugin': '*'
       '@typescript-eslint/parser': '*'
     resolution:
-      integrity: sha512-DJXyH5dGfGhXK+z61PXicNcuqWGK4+gqI+lM9OAKYH9d49h9saTHJ0WHmwPgeohcqyTjua49Ncybwqrz3QBk5A==
+      integrity: sha512-p5DVySMhQeVeYw72isFIa6QvzSAXWpaerOQPu3IKHuxNwEiSc6hAs5wtwFgxX6mHpPQViUT6YfzuscyCtsYnpQ==
       tarball: 'file:projects/init.tgz'
     version: 0.0.0
 registry: ''
@@ -8104,6 +8126,7 @@ specifiers:
   jest: ^24.9.0
   jsonc-parser: ^2.2.0
   parcel-bundler: ^1.12.4
+  parcel-plugin-shebang: ^1.2.8
   ts-jest: ^24.1.0
   typescript: ^3.7.2
   yargs: ^15.0.2

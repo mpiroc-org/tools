@@ -75,6 +75,10 @@
       "allowedCategories": [ "production" ]
     },
     {
+      "name": "parcel-plugin-shebang",
+      "allowedCategories": [ "production" ]
+    },
+    {
       "name": "request",
       "allowedCategories": [ "production" ]
     },
