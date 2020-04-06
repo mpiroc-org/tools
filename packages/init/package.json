@@ -1,6 +1,6 @@
 {
   "name": "@mpiroc-org/init",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "Tool to create new packages in a monorepo",
   "keywords": [],
   "homepage": "https://github.com/mpiroc-org/tools#readme",

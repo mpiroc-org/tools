@@ -2,6 +2,12 @@
   "name": "@mpiroc-org/aws",
   "entries": [
     {
+      "version": "0.0.16",
+      "tag": "@mpiroc-org/aws_v0.0.16",
+      "date": "Mon, 06 Apr 2020 23:42:37 GMT",
+      "comments": {}
+    },
+    {
       "version": "0.0.15",
       "tag": "@mpiroc-org/aws_v0.0.15",
       "date": "Mon, 06 Apr 2020 23:36:15 GMT",

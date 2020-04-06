@@ -1,6 +1,11 @@
 # Change Log - @mpiroc-org/init
 
-This log was last generated on Mon, 06 Apr 2020 23:36:15 GMT and should not be manually modified.
+This log was last generated on Mon, 06 Apr 2020 23:42:37 GMT and should not be manually modified.
+
+## 0.0.16
+Mon, 06 Apr 2020 23:42:37 GMT
+
+*Version update only*
 
 ## 0.0.15
 Mon, 06 Apr 2020 23:36:15 GMT
