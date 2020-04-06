@@ -12,7 +12,7 @@
   "types": "out/bin/init.d.ts",
   "repository": "github:mpiroc-org/tools",
   "bin": {
-    "init": "out/bin/init.js"
+    "init": "dist/bin/init.js"
   },
   "files": [
     "dist/bin/*"
