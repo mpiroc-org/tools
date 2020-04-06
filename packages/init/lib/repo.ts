@@ -14,6 +14,9 @@ function spawn(cwd: string, command: string, ...args: string[]): void {
     )
 }
 
+/**
+ * @alpha
+ */
 export async function initRepo({ cwd }: { cwd: string }): Promise<void> {
     spawn(cwd, `rush`, `init`)
     

@@ -8,18 +8,17 @@
   "license": "UNLICENSED",
   "author": "Matthew Pirocchi <matthew.pirocchi@gmail.com>",
   "contributors": [],
-  "main": "out/lib/index.ts",
-  "types": "out/lib/index.d.ts",
+  "main": "out/bin/init.ts",
+  "types": "out/bin/init.d.ts",
   "repository": "github:mpiroc-org/tools",
   "bin": {
     "init": "out/bin/init.js"
   },
   "files": [
-    "out/bin/*",
-    "out/lib/*"
+    "dist/bin/*"
   ],
   "scripts": {
-    "build": "tsc && copyfiles --all lib/assets/**/* out",
+    "build": "tsc && copyfiles --all lib/assets/**/* out && parcel build bin/init.ts --out-dir dist/bin --target node --no-minify && api-extractor run --local --verbose && copyfiles --all lib/assets/**/* dist",
     "lint": "eslint --ext .ts ."
   },
   "engines": {
@@ -27,8 +26,8 @@
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/",
-    "main": "out/lib/index.js",
-    "types": "out/lib/index.d.ts"
+    "main": "dist/bin/init.js",
+    "types": "dist/bin/init.d.ts"
   },
   "jest": {
     "preset": "@mpiroc-org/jest-config"
