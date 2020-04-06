@@ -1,6 +1,11 @@
 # Change Log - @mpiroc-org/aws
 
-This log was last generated on Sun, 05 Apr 2020 22:28:38 GMT and should not be manually modified.
+This log was last generated on Mon, 06 Apr 2020 23:36:15 GMT and should not be manually modified.
+
+## 0.0.15
+Mon, 06 Apr 2020 23:36:15 GMT
+
+*Version update only*
 
 ## 0.0.14
 Sun, 05 Apr 2020 22:28:38 GMT
