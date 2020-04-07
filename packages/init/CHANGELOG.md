@@ -1,6 +1,13 @@
 # Change Log - @mpiroc-org/init
 
-This log was last generated on Mon, 06 Apr 2020 23:53:07 GMT and should not be manually modified.
+This log was last generated on Tue, 07 Apr 2020 00:06:01 GMT and should not be manually modified.
+
+## 0.0.18
+Tue, 07 Apr 2020 00:06:01 GMT
+
+### Updates
+
+- Include assets in bundle
 
 ## 0.0.17
 Mon, 06 Apr 2020 23:53:07 GMT

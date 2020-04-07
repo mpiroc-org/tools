@@ -12,6 +12,6 @@
     "out",
 
     // Should be included in final bundle as loose files.
-    "lib/assets"
+    "bin/assets"
   ]
 }

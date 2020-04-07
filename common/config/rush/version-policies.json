@@ -12,7 +12,7 @@
   {
     "definitionName": "lockStepVersion",
     "policyName": "default",
-    "version": "0.0.17",
+    "version": "0.0.18",
     "nextBump": "patch"
   }
   // {

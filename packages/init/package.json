@@ -1,6 +1,6 @@
 {
   "name": "@mpiroc-org/init",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "Tool to create new packages in a monorepo",
   "keywords": [],
   "homepage": "https://github.com/mpiroc-org/tools#readme",
@@ -18,7 +18,7 @@
     "dist/bin/*"
   ],
   "scripts": {
-    "build": "tsc && copyfiles --all lib/assets/**/* out && parcel build bin/init.ts --out-dir dist/bin --target node --no-minify && api-extractor run --local --verbose && copyfiles --all lib/assets/**/* dist",
+    "build": "tsc && parcel build bin/init.ts --out-dir dist/bin --target node --no-minify && api-extractor run --local --verbose && copyfiles --all bin/assets/**/* dist",
     "lint": "eslint --ext .ts ."
   },
   "engines": {
