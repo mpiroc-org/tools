@@ -1,0 +1,6 @@
+out/
+dist/
+**/node_modules/
+generators/
+generators-ts/templates/
+generators-ts/**/templates/

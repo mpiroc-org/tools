@@ -33,13 +33,6 @@
     "variants": [],
     "projects": [
         {
-            "packageName": "@mpiroc-org/aws",
-            "projectFolder": "packages/aws",
-            "reviewCategory": "production",
-            "shouldPublish": true,
-            "versionPolicyName": "default"
-        },
-        {
             "packageName": "@mpiroc-org/build-layer",
             "projectFolder": "packages/build-layer",
             "reviewCategory": "production",
@@ -47,8 +40,8 @@
             "versionPolicyName": "default"
         },
         {
-            "packageName": "@mpiroc-org/init",
-            "projectFolder": "packages/init",
+            "packageName": "@mpiroc-org/generator-rush",
+            "projectFolder": "packages/generator-rush",
             "reviewCategory": "production",
             "shouldPublish": true,
             "versionPolicyName": "default"

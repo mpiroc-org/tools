@@ -15,10 +15,6 @@
       "allowedCategories": [ "production" ]
     },
     {
-      "name": "@mpiroc-org/jest-config",
-      "allowedCategories": [ "production" ]
-    },
-    {
       "name": "@mpiroc-org/ts-config",
       "allowedCategories": [ "production" ]
     },
@@ -31,7 +27,7 @@
       "allowedCategories": [ "production" ]
     },
     {
-      "name": "aws-sdk",
+      "name": "chalk",
       "allowedCategories": [ "production" ]
     },
     {
@@ -55,10 +51,6 @@
       "allowedCategories": [ "production" ]
     },
     {
-      "name": "isomorphic-git",
-      "allowedCategories": [ "production" ]
-    },
-    {
       "name": "jest",
       "allowedCategories": [ "production" ]
     },
@@ -67,7 +59,7 @@
       "allowedCategories": [ "production" ]
     },
     {
-      "name": "nodegit",
+      "name": "npm-api",
       "allowedCategories": [ "production" ]
     },
     {
@@ -83,6 +75,18 @@
       "allowedCategories": [ "production" ]
     },
     {
+      "name": "semver",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "through",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "tmp",
+      "allowedCategories": [ "production" ]
+    },
+    {
       "name": "ts-jest",
       "allowedCategories": [ "production" ]
     },
@@ -92,6 +96,26 @@
     },
     {
       "name": "yargs",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "yeoman-assert",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "yeoman-generator",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "yeoman-test",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "yo",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "yosay",
       "allowedCategories": [ "production" ]
     }
   ]

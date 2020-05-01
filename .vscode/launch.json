@@ -1,0 +1,44 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Main (App) Generator",
+            "cwd": "/home/mpiroc/sandbox",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "protocol": "inspector",
+            "program": "${workspaceFolder}/packages/generator-rush/node_modules/yo/lib/cli.js",
+            "outFiles": [
+                "${workspaceFolder}/packages/generator-rush/generators/**/*",
+                "${workspaceFolder}/packages/generator-rush/node_modules/**/*"
+            ],
+            "args": [
+                "@mpiroc-org/rush"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Sub (Package) Generator",
+            "cwd": "/home/mpiroc/sandbox",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "protocol": "inspector",
+            "program": "${workspaceFolder}/packages/generator-rush/node_modules/yo/lib/cli.js",
+            "outFiles": [
+                "${workspaceFolder}/packages/generator-rush/generators/**/*",
+                "${workspaceFolder}/packages/generator-rush/node_modules/**/*"
+            ],
+            "args": [
+                "@mpiroc-org/rush:package"
+            ]
+        }
+    ]
+}

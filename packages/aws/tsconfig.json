@@ -1,6 +1,0 @@
-{
-  "extends": "./node_modules/@mpiroc-org/ts-config/tsconfig.json",
-  "compilerOptions": {
-    "outDir": "./out"
-  }
-}

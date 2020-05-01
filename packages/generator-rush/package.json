@@ -1,0 +1,72 @@
+{
+    "name": "@mpiroc-org/generator-rush",
+    "version": "0.0.18",
+    "description": "Generator for Rush-based monorepos",
+    "keywords": [
+        "yeoman-generator"
+    ],
+    "homepage": "https://github.com/mpiroc-org/tools#readme",
+    "bugs": "https://github.com/mpiroc-org/tools/issues",
+    "license": "UNLICENSED",
+    "author": {
+        "name": "Matthew Pirocchi",
+        "email": "matthew.pirocchi@gmail.com",
+        "url": "https://github.com/mpiroc"
+    },
+    "files": [
+        "generators"
+    ],
+    "scripts": {
+        "build": "tsc && copyfiles --all --up 1 \"generators-ts/**/templates/**/*\" generators && api-extractor run --local --verbose",
+        "lint": "eslint --ext .ts ."
+    },
+    "main": "generators/app/index.js",
+    "types": "generators/app/index.d.ts",
+    "contributors": [],
+    "repository": "github:mpiroc-org/tools",
+    "engines": {
+        "node": "^12.13.0"
+    },
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com/",
+        "main": "generators/app/index.js",
+        "types": "generators/app/index.d.ts"
+    },
+    "jest": {
+        "preset": "@mpiroc-org/jest-config"
+    },
+    "dependencies": {
+        "yeoman-generator": "^4.9.0",
+        "chalk": "^2.1.0",
+        "yosay": "^2.0.1",
+        "tmp": "^0.2.1",
+        "jsonc-parser": "^2.2.1"
+    },
+    "devDependencies": {
+        "@microsoft/api-extractor": "^7.7.8",
+        "@mpiroc-org/api-extractor-config": "^0.0.5",
+        "@mpiroc-org/eslint-config": "^0.0.5",
+        "@mpiroc-org/ts-config": "^0.0.5",
+        "@types/fs-extra": "^8.0.1",
+        "@types/jest": "^24.0.23",
+        "@types/node": "^12.12.8",
+        "@types/semver": "^7.1.0",
+        "@types/tmp": "^0.2.0",
+        "@types/yargs": "^13.0.3",
+        "@types/yeoman-generator": "^3.1.4",
+        "@types/yosay": "^0.0.29",
+        "@typescript-eslint/eslint-plugin": "^2.21.0",
+        "@typescript-eslint/parser": "^2.21.0",
+        "copyfiles": "^2.2.0",
+        "eslint": "^6.8.0",
+        "jest": "^24.9.0",
+        "parcel-bundler": "^1.12.4",
+        "parcel-plugin-shebang": "^1.2.8",
+        "semver": "^7.3.2",
+        "ts-jest": "^24.1.0",
+        "typescript": "^3.7.2",
+        "yeoman-test": "^1.7.0",
+        "yeoman-assert": "^3.1.0",
+        "yo": "^3.1.1"
+    }
+}
