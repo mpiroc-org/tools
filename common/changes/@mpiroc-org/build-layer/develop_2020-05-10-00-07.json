@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "packageName": "@mpiroc-org/build-layer",
+      "comment": "",
+      "type": "none"
+    }
+  ],
+  "packageName": "@mpiroc-org/build-layer",
+  "email": "matthew.pirocchi@gmail.com"
+}
