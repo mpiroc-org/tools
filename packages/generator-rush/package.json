@@ -1,6 +1,6 @@
 {
     "name": "@mpiroc-org/generator-rush",
-    "version": "0.0.19",
+    "version": "0.0.20",
     "description": "Generator for Rush-based monorepos",
     "keywords": [
         "yeoman-generator"
