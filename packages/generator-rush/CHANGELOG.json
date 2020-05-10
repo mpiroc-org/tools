@@ -1,0 +1,17 @@
+{
+  "name": "@mpiroc-org/generator-rush",
+  "entries": [
+    {
+      "version": "0.0.19",
+      "tag": "@mpiroc-org/generator-rush_v0.0.19",
+      "date": "Sun, 10 May 2020 00:08:00 GMT",
+      "comments": {
+        "none": [
+          {
+            "comment": "Initial publish"
+          }
+        ]
+      }
+    }
+  ]
+}
