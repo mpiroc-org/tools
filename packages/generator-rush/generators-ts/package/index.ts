@@ -1,10 +1,8 @@
-import { ChildProcess } from 'child_process'
-import * as semver from 'semver'
-import { GeneratorBase, readToEnd } from '../util'
+import { GeneratorBase } from '../generator'
 import { addCategory, addPackage } from '../rush-json'
 
 // TODO: Automatically determine
-const CONFIG_VERSION: string = `0.0.5`
+const DEFAULT_CONFIG_VERSION: string = `0.0.5`
 
 /**
  * @alpha
@@ -53,35 +51,11 @@ export default class PackageGenerator extends GeneratorBase {
     }
 
     private get _configVersion(): string {
-        if (!this._answers.configVersion) {
-            throw new Error(`User did not provide a config version`)
-        }
-
-        return this._answers.configVersion
-    }
-
-    private async _getPackageVersion(name: string): Promise<string | undefined> {
-        const npmProcess: ChildProcess = this.spawnCommand(
-            `npm`,
-            [`view`, name, `version`],
-            { stdio: `pipe` }
-        )
-        if (!npmProcess.stdout) {
-            throw new Error(`Could not get stdout stream from npm process`)
-        }
-
-        const output: string = (await readToEnd(npmProcess.stdout)).trim()
-        const version: string | null = semver.valid(output)
-
-        if (!version) {
-            this.log(`Invalid semver: ${output}, defaulting to ${CONFIG_VERSION}`)
-        }
-
-        return version || CONFIG_VERSION
+        return this._answers.configVersion || DEFAULT_CONFIG_VERSION
     }
 
     public async initializing(): Promise<void> {
-        this._defaultVersion = await this._getPackageVersion(`@mpiroc-org/ts-config`)
+        this._defaultVersion = await this.getLatestPackageVersion(`@mpiroc-org/ts-config`)
     }
 
     public async prompting(): Promise<void> {
@@ -113,7 +87,7 @@ export default class PackageGenerator extends GeneratorBase {
                 type: `input`,
                 name: `configVersion`,
                 message: `The version of @mpiroc-org/*-config to use.`,
-                default: this._defaultVersion || CONFIG_VERSION
+                default: this._defaultVersion || DEFAULT_CONFIG_VERSION
             }
         ])
     }
@@ -131,6 +105,7 @@ export default class PackageGenerator extends GeneratorBase {
         rushJsonRaw = addPackage(
             rushJsonRaw,
             {
+                scope: this._scope,
                 name: this._name,
                 category: this._category,
                 packages: this._packages
@@ -156,10 +131,7 @@ export default class PackageGenerator extends GeneratorBase {
     }
 
     public install(): void {
-        this.spawnCommandSync(`rush`, [ `update`, `--full` ], {
-            cwd: this.destinationPath(this._packages, this._name),
-            shell: true
-        })
+        this.rushUpdate()
     }
 
     private _buildPackageManifest(): {} {

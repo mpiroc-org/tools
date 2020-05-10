@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "packageName": "@mpiroc-org/generator-rush",
+      "comment": "Add dependency generator",
+      "type": "none"
+    }
+  ],
+  "packageName": "@mpiroc-org/generator-rush",
+  "email": "matthew.pirocchi@gmail.com"
+}

@@ -1,4 +1,4 @@
-import { GeneratorBase } from '../util'
+import { GeneratorBase } from '../generator'
 
 /**
  * @alpha

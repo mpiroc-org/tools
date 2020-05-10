@@ -7,7 +7,7 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch Main (App) Generator",
+            "name": "Launch App Generator",
             "cwd": "/home/mpiroc/sandbox",
             "skipFiles": [
                 "<node_internals>/**"
@@ -25,7 +25,7 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch Sub (Package) Generator",
+            "name": "Launch Package Generator",
             "cwd": "/home/mpiroc/sandbox",
             "skipFiles": [
                 "<node_internals>/**"
@@ -38,6 +38,24 @@
             ],
             "args": [
                 "@mpiroc-org/rush:package"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Dependency Generator",
+            "cwd": "${workspaceFolder}",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "protocol": "inspector",
+            "program": "${workspaceFolder}/packages/generator-rush/node_modules/yo/lib/cli.js",
+            "outFiles": [
+                "${workspaceFolder}/packages/generator-rush/generators/**/*",
+                "${workspaceFolder}/packages/generator-rush/node_modules/**/*"
+            ],
+            "args": [
+                "@mpiroc-org/rush:dependency"
             ]
         }
     ]

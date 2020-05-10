@@ -2,23 +2,21 @@ import * as path from 'path'
 import * as jsonc from 'jsonc-parser'
 import * as os from 'os'
 
-function getPackageName(name: string): string {
-    return `@mpiroc-org/${name}`
-}
-
 export interface IPackageInfo {
     name: string
     category: string
     packages: string
+    scope: string
 }
 
-interface IRushJson {
+export interface IRushJson {
     approvedPackagesPolicy?: {
         reviewCategories?: string[]
     }
+    projects?: IRushJsonProject[]
 }
 
-interface IRushJsonProject {
+export interface IRushJsonProject {
     packageName: string
     projectFolder: string
     reviewCategory: string
@@ -31,6 +29,12 @@ const formattingOptions: jsonc.FormattingOptions = {
     tabSize: TAB_SIZE,
     insertSpaces: true,
     eol: os.EOL
+}
+
+export function getProjects(raw: string): IRushJsonProject[] {
+    const config: IRushJson = jsonc.parse(raw)
+
+    return config.projects || []
 }
 
 export function addCategory(originalRaw: string, category: string): string {
@@ -55,9 +59,9 @@ export function addCategory(originalRaw: string, category: string): string {
     return jsonc.applyEdits(originalRaw, edits)
 }
 
-export function addPackage(originalRaw: string, { name, category, packages }: IPackageInfo): string {
+export function addPackage(originalRaw: string, { name, category, packages, scope }: IPackageInfo): string {
     const project: IRushJsonProject = {
-        packageName: getPackageName(name),
+        packageName: `${scope}/${name}`,
         projectFolder: path.join(packages, name).replace(path.win32.sep, path.posix.sep),
         reviewCategory: category,
         shouldPublish: true,
