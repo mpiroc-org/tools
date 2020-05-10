@@ -63,8 +63,8 @@ export default class RepoGenerator extends GeneratorBase {
         this.copyFromTemplate(`CONTRIBUTING.md`)
         this.copyFromTemplate(`rush.json`)
 
-        if (this._answers.git) {
-            this.copyFromTemplate(`.gitignore`)
+        if (!this._answers.git) {
+            this.fs.delete(this.destinationPath(`.gitignore`))
         }
         if (!this._answers.travis) {
             this.fs.delete(this.destinationPath(`.travis.yml`))
