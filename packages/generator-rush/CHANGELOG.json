@@ -2,6 +2,18 @@
   "name": "@mpiroc-org/generator-rush",
   "entries": [
     {
+      "version": "0.0.21",
+      "tag": "@mpiroc-org/generator-rush_v0.0.21",
+      "date": "Tue, 12 May 2020 17:52:06 GMT",
+      "comments": {
+        "none": [
+          {
+            "comment": "Add dependency generator"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.0.20",
       "tag": "@mpiroc-org/generator-rush_v0.0.20",
       "date": "Sun, 10 May 2020 00:30:22 GMT",
