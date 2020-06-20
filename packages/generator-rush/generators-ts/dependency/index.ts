@@ -4,7 +4,7 @@ import { getProjects, IRushJsonProject } from '../rush-json'
 import * as fs from 'fs'
 import * as util from 'util'
 
-const exists = util.promisify(fs.exists)
+const exists: (path: fs.PathLike) => Promise<boolean> = util.promisify(fs.exists)
 
 type DependencyKind = 'dependencies' | 'devDependencies' | 'peerDependencies'
 
@@ -49,7 +49,7 @@ export default class DependencyGenerator extends GeneratorBase {
     } = {}
 
     public async initializing(): Promise<void> {
-        const destinationPath = this.destinationPath()
+        const destinationPath: string = this.destinationPath()
         const rushRoot: string | undefined = this._rushRoot = await findRushRoot(destinationPath)
         if (!rushRoot) {
             throw Error(`Could not find rush.json in ${destinationPath}`)
