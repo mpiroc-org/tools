@@ -2,6 +2,7 @@
 version: 0.2
 env:
   parameter-store:
+    # These are used in common/config/rush/.npmrc[-publish]
     GITHUB_PACKAGE_REGISTRY: /github/registry
     GITHUB_PERSONAL_ACCESS_TOKEN: /github/mpiroc-org/ci
     GITHUB_SCOPE: /github/mpiroc-org/scope
@@ -12,10 +13,7 @@ phases:
   pre_build:
     commands:
       - npm install --global yo
-      # Note: Assumes echo uses UTF-8 encoding--this is not true on Windows/PowerShell.
-      - echo "@$GITHUB_SCOPE:registry=https:$GITHUB_PACKAGE_REGISTRY" >> ~/.npmrc
-      - echo "$GITHUB_PACKAGE_REGISTRY/:_authToken=$GITHUB_PERSONAL_ACCESS_TOKEN" >> ~/.npmrc
-      - node common/scripts/install-run-rush.js update --full
+      - node common/scripts/install-run-rush.js update
   build:
     commands:
       - node common/scripts/install-run-rush.js build
