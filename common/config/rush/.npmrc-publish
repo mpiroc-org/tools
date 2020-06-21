@@ -1,1 +1,5 @@
-.npmrc
+@${GITHUB_SCOPE}:registry=https:${GITHUB_PACKAGE_REGISTRY}
+${GITHUB_PACKAGE_REGISTRY}/:_authToken=${GITHUB_PERSONAL_ACCESS_TOKEN}
+registry=https://registry.npmjs.org/
+always-auth=false
+git-checks=false

@@ -13,6 +13,9 @@ phases:
   pre_build:
     commands:
       - npm install --global yo
+      # Note: Assumes echo uses UTF-8 encoding--this is not true on Windows/PowerShell.
+      - echo '@${GITHUB_SCOPE}:registry=https:${GITHUB_PACKAGE_REGISTRY}' >> ~/.npmrc
+      - echo '${GITHUB_PACKAGE_REGISTRY}/:_authToken=${GITHUB_PERSONAL_ACCESS_TOKEN}' >> ~/.npmrc
       - node common/scripts/install-run-rush.js update
   build:
     commands:
